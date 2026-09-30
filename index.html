@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="A Binary Search Tree based Phone Contact Management System"
+    >
+
+    <title>ContactVault | Phone Contact Management</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ==========================================
+         HEADER
+         ========================================== -->
+
+    <header>
+
+        <h1>Phone Contact Management System</h1>
+
+        <p>
+            Smart contact management powered by a
+            Binary Search Tree
+        </p>
+
+    </header>
+
+
+    <!-- ==========================================
+         MAIN CONTENT
+         ========================================== -->
+
+    <main class="container">
+
+
+        <!-- ======================================
+             ADD CONTACT
+             ====================================== -->
+
+        <section class="card">
+
+            <h2>➕ Add Contact</h2>
+
+            <form id="contactForm">
+
+                <!-- Name -->
+
+                <div class="form-group">
+
+                    <label for="name">
+                        Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        placeholder="Enter contact name"
+                        autocomplete="name"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- Phone -->
+
+                <div class="form-group">
+
+                    <label for="phone">
+                        Phone Number
+                    </label>
+
+                    <input
+                        type="tel"
+                        id="phone"
+                        placeholder="Enter phone number"
+                        autocomplete="tel"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- Email -->
+
+                <div class="form-group">
+
+                    <label for="email">
+                        Email
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="Enter email address"
+                        autocomplete="email"
+                    >
+
+                </div>
+
+
+                <!-- Address -->
+
+                <div class="form-group">
+
+                    <label for="address">
+                        Address
+                    </label>
+
+                    <textarea
+                        id="address"
+                        rows="3"
+                        placeholder="Enter address"
+                    ></textarea>
+
+                </div>
+
+
+                <!-- Submit -->
+
+                <button type="submit">
+                    Add Contact
+                </button>
+
+            </form>
+
+
+            <!-- Success / Error message -->
+
+            <div
+                id="formMessage"
+                class="message"
+                style="display: none;"
+            ></div>
+
+        </section>
+
+
+
+        <!-- ======================================
+             SEARCH CONTACT
+             ====================================== -->
+
+        <section class="card">
+
+            <h2>🔍 Search Contact</h2>
+
+            <div class="search-box">
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search contact by name..."
+                >
+
+                <button id="searchBtn" type="button">
+                    Search
+                </button>
+
+            </div>
+
+
+            <!-- Search result will appear here -->
+
+            <div id="searchResult"></div>
+
+        </section>
+
+
+
+        <!-- ======================================
+             ALL CONTACTS
+             ====================================== -->
+
+        <section class="card">
+
+    <h2>📋 All Contacts</h2>
+
+    <button
+        id="displayBtn"
+        type="button"
+    >
+        Display All Contacts
+    </button>
+
+    <div
+        id="contactsContainer"
+        class="contacts-container"
+    ></div>
+
+</section>
+
+
+<!-- ======================================
+     EDIT CONTACT
+     ====================================== -->
+
+<section
+    class="card"
+    id="editSection"
+    style="display: none;"
+>
+
+    <h2>✏️ Edit Contact</h2>
+
+    <form id="editForm">
+
+        <div class="form-group">
+
+            <label for="editName">
+                Name
+            </label>
+
+            <input
+                type="text"
+                id="editName"
+                required
+            >
+
+        </div>
+
+
+        <div class="form-group">
+
+            <label for="editPhone">
+                Phone Number
+            </label>
+
+            <input
+                type="tel"
+                id="editPhone"
+                required
+            >
+
+        </div>
+
+
+        <div class="form-group">
+
+            <label for="editEmail">
+                Email
+            </label>
+
+            <input
+                type="email"
+                id="editEmail"
+            >
+
+        </div>
+
+
+        <div class="form-group">
+
+            <label for="editAddress">
+                Address
+            </label>
+
+            <textarea
+                id="editAddress"
+                rows="3"
+            ></textarea>
+
+        </div>
+
+
+        <button type="submit">
+            Update Contact
+        </button>
+
+        <button
+            type="button"
+            id="cancelEditBtn"
+        >
+            Cancel
+        </button>
+
+    </form>
+
+</section>
+
+
+    </main>
+
+
+
+    <!-- ==========================================
+         JAVASCRIPT
+         ========================================== -->
+
+    <script
+        type="module"
+        src="js/app.js">
+    </script>
+
+</body>
+
+</html>
